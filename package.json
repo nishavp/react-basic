@@ -1,0 +1,26 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React By Nisha Prasad",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishavp/react-basic.git"
+  },
+  "keywords": [
+    "react",
+    "basic"
+  ],
+  "author": "Nisha Prasad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nishavp/react-basic/issues"
+  },
+  "homepage": "https://github.com/nishavp/react-basic#readme",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
