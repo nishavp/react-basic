@@ -1,9 +1,21 @@
-//creating nested elements in react
-const parent = React.createElement(
-    "div",{id:"parent"},
-    React.createElement("div",{id:"child"},
-    React.createElement("h1",{},"This h1 new tag"))
-)
+//creating nested complex elements using react
+const parent = React.createElement("div",{id:"parent"},
+    [React.createElement("div",{id:"child1"},[
+        React.createElement("h1",{},"This h1 new tag in child 1"),
+        React.createElement("h2",{},"This h2 new tag in child 1"),
+        React.createElement("p",{},"This p new tag in child 1")
+    ]),
+    React.createElement("div",{id:"child2"},[
+        React.createElement("h1",{},"This h1 new tag in child 2"),
+        React.createElement("h2",{},"This h2 new tag in child 2"),
+        React.createElement("p",{},"This p new tag in child 2")
+    ]),
+    React.createElement("div",{id:"child3"},[
+        React.createElement("h1",{},"This h1 new tag in child 3"),
+        React.createElement("h2",{},"This h2 new tag in child 3"),
+        React.createElement("p",{},"This p new tag in child 3")
+    ])]
+);
 
 
 //create basic tag insert in HTML using react
