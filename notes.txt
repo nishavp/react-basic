@@ -1,0 +1,15 @@
+/**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
+
+Basic Git commands
+- git init (To initialize git in the local folder)
+- git branch -M main
+- git add . 
+- git remote add origin "url" (one time command for connection local to remote)
+- git commit -m "commit message"
+- git push origin main
+- add .gitignore file (add /node_modules so that this folder do not go in github)
+
+
+Things learned in the project
+To build app 
+- npx parcel index.html 
