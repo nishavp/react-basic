@@ -9,6 +9,8 @@ If project created locally
 If repo clone from github 
 - npm install (as all details are mentioned in package-lock.json) 
 
-To build app 
+To build development app 
 - npx parcel index.html 
 
+To build production app 
+- npx parcel build index.html

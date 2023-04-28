@@ -10,14 +10,18 @@ Basic Git commands
 - add .gitignore file (add /node_modules so that this folder do not go in github) 
 
 Things learned in the project
-To build app 
-- npx parcel index.html 
-
 To Install React 
 - npm install react 
-- npm install react-dom
+- npm install react-dom 
+
+To build development app 
+- npx parcel index.html 
+
+To build production app 
+- npx parcel build index.html
 
 Uses of parcel 
+- Main Documentation : https://parceljs.org/
 - Create development build 
 - Create local server 
 - Uses HMR - Hot Module Replacement 
@@ -29,6 +33,12 @@ Uses of parcel
 - Consistent Hashing - It helps to ensure that assets are consistently and predictably identified, even as the application changes and evolves over time. 
 - Code Spliting 
 - Differential Bundling - feature in Parcel that allows for the creation of smaller, more efficient bundles by only including the code that is necessary for a particular browser or environment. 
+- Diagnostic 
+- Error handling 
+- To host apps in HTTPs 
+- Tree shaking - it basically removes unused code 
+- Different build for development and production 
+
 
 
 
