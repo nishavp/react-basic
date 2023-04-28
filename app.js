@@ -1,3 +1,8 @@
+//importing react when cdn links are removed
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+
 //creating nested complex elements using react
 const parent = React.createElement("div",{id:"parent"},
     [React.createElement("div",{id:"child1"},[

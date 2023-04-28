@@ -7,9 +7,28 @@ Basic Git commands
 - git remote add origin "url" (one time command for connection local to remote)
 - git commit -m "commit message"
 - git push origin main
-- add .gitignore file (add /node_modules so that this folder do not go in github)
-
+- add .gitignore file (add /node_modules so that this folder do not go in github) 
 
 Things learned in the project
 To build app 
 - npx parcel index.html 
+
+To Install React 
+- npm install react 
+- npm install react-dom
+
+Uses of parcel 
+- Create development build 
+- Create local server 
+- Uses HMR - Hot Module Replacement 
+- Uses File watching algorithm - which is written in C++ 
+- Use Caching - so that files builds faster 
+- Does image optimization 
+- Minify files at production level 
+- Compress the build files which are generated 
+- Consistent Hashing - It helps to ensure that assets are consistently and predictably identified, even as the application changes and evolves over time. 
+- Code Spliting 
+- Differential Bundling - feature in Parcel that allows for the creation of smaller, more efficient bundles by only including the code that is necessary for a particular browser or environment. 
+
+
+
