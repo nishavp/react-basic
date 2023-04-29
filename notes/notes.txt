@@ -1,4 +1,5 @@
 /**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
+Notes of Episodes 1,2,3
 
 Basic Git commands
 - git init (To initialize git in the local folder)
@@ -38,6 +39,24 @@ Uses of parcel
 - To host apps in HTTPs 
 - Tree shaking - it basically removes unused code 
 - Different build for development and production 
+
+To support browserlist 
+- Documentation : https://browserslist.dev/?q=bGFzdCAyIHZlcnNpb25z 
+- check package.json file for configuration 
+
+To add own start and build script to package.json 
+- for start - use npm run start or npm start 
+- for buidl - use npm run build 
+
+Introduction to JSX 
+- Easier to use 
+- Its a HTML like syntax. Its not HTML 
+- It is a syntax extension to JavaScript 
+- Babel is used to convert JSX code to react part which browser understand 
+
+
+
+
 
 
 

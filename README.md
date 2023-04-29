@@ -10,7 +10,8 @@ If repo clone from github
 - npm install (as all details are mentioned in package-lock.json) 
 
 To build development app 
-- npx parcel index.html 
+- npx run start or npm run 
 
 To build production app 
-- npx parcel build index.html
+- npm run build 
+
