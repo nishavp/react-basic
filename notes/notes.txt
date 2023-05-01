@@ -53,6 +53,12 @@ Introduction to JSX
 - Its a HTML like syntax. Its not HTML 
 - It is a syntax extension to JavaScript 
 - Babel is used to convert JSX code to react part which browser understand 
+- JSX will have only one root parent element 
+- You can call one component inside another component 
+- Using {} brackets you can add javascript code 
+- While using multiple container either use one single parent, React.Fragment or best use empty tag. 
+
+
 
 
 

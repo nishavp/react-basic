@@ -1,0 +1,6 @@
+React 
+- This is a JavaScript library for front-end development. Overall, it allows developers to create React apps with HTML tags, a JavaScript library, and CSS. In a nutshell, React is used for building web applications that can be accessed via a browser. 
+
+React Native 
+- This is a mobile application framework designed to facilitate the development of native apps for mobile platforms. Unlike React, which relies on HTML tags for rendering UI components, React Native uses native components that are specific to the platform on which the app is running. 
+

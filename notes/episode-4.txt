@@ -1,0 +1,20 @@
+/**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
+Notes of Episodes 4 
+
+Project - Food Ordering Website 
+Structure of Project (Main Components) 
+
+- Header
+    - Logo
+    - Menu Items 
+- Body 
+    - Search 
+    - Restaurant Container (It will have all cards item) 
+- Footer 
+    - copyright 
+    - Address 
+    - Contact Information 
+
+
+# Created basic Food Ordering Website
+
