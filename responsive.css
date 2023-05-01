@@ -1,0 +1,185 @@
+/* ----------- iPad ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) { 
+    .container{
+        width: 90%;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) { 
+
+    .about-section .col-2{
+        flex-direction: column-reverse;
+    }
+    .about-section .col-2 .cols{
+        width: 90%;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: 47% 47%;  
+    }
+    .footer .container {
+        grid-template-columns: 30% 25% 30%;
+        gap: 50px;
+        display: grid;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: landscape) { 
+
+    .card-grid {
+        display: grid;
+        gap:30px  
+    }
+
+}
+
+/* ----------- iPhone ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 767px) { 
+
+    .container{
+        width: 90%;
+    }
+    .about-section .container .cols {
+        width: 100%;
+    }
+    .menuLinks ul li:last-child {
+        display: block;
+    }
+    .menuLinks ul li:not(:last-child) {
+        display: none;
+    }
+
+    .section-heading h2{
+        font-size: 30px;
+    }
+    .single-card .card-title{
+        font-size: 20px;
+    }
+    .footer-title{
+        font-size: 25px;
+    }
+    .footer-subtitle{
+        font-size: 18px;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 767px) 
+  and (orientation: portrait) { 
+
+    .about-section .container, .about-section .col-2{
+        display: block;
+    }
+    .about-details {
+        width: 100%;
+    }
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 30px; 
+    }
+    .footer .container {
+        grid-template-columns: 100%;
+        gap: 30px;
+        display: grid;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 767px) 
+  and (orientation: landscape) { 
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 47% 47%;
+        gap: 30px; 
+    }
+    .about-section .col-2{
+        flex-direction: column-reverse;
+    }
+    .about-section .col-2 .cols{
+        width: 90%;
+    }
+    .footer .container {
+        grid-template-columns: 30% 25% 30%;
+        gap: 50px;
+        display: grid;
+    }
+
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 812px) { 
+
+    .container{
+        width: 90%;
+    }
+    .about-section .container .cols {
+        width: 100%;
+    }
+    .menuLinks ul li:last-child {
+        display: block;
+    }
+    .menuLinks ul li:not(:last-child) {
+        display: none;
+    }
+    .single-card .card-title{
+        font-size: 20px;
+    }
+    .footer-title{
+        font-size: 25px;
+    }
+    .footer-subtitle{
+        font-size: 18px;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 812px) 
+  and (orientation: landscape) { 
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: 47% 47%;  
+    }
+
+}

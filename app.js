@@ -109,6 +109,7 @@ const BodyLayout = () => {
             <div className="card-grid">
               <RestaurantCard/>
               <RestaurantCard/>
+              <RestaurantCard/>
             </div>
           </div>
         </div>
@@ -139,7 +140,6 @@ const FooterLayout = () => {
                     <img src={footerLogo} alt="footer-logo"/>
                 </div>
                 <br/>
-                <p>Developed By Nisha Prasad</p>
             </div>
             <div className="footer-col">
                 <h2 className="footer-title">Explore</h2>
@@ -160,6 +160,9 @@ const FooterLayout = () => {
                   <p><a href="tel:+91 9876543211">+91 9876543211</a></p>
               </div>
             </div>
+          </div>
+          <div className="footer-bottom">
+              <p>Developed By Nisha Prasad !!</p>
           </div>
       </footer>
     </div>
