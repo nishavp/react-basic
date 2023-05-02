@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "diffEditor.wordWrap": "on",
+  "diffEditor.renderMarginRevertIcon": false,
+  "editor.fontSize": 12,
+  "editor.formatOnPaste": true
+}

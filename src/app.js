@@ -9,14 +9,14 @@ import FooterLayout from "./components/Footer";
 const AppLayout = () => {
   return (
     <div className="app">
-      <HeaderComponent/>
-      <BodyLayout/>
-      <FooterLayout/>
+      <HeaderComponent />
+      <BodyLayout />
+      <FooterLayout />
     </div>
   );
-}
+};
 
 //create root element to render above tag, here we have use RectDOM as we are creating the structure.
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //display in html
-root.render(<AppLayout/>);
+root.render(<AppLayout />);
