@@ -25,7 +25,7 @@ const RestaurantCard = (props) => {
           <h4 className="card-title">{name}</h4>
           <p className="cusine-name">{cuisines.join(', ')}</p>
           <div className="card-inner-details">
-            <p className="rating"><span><BsFillStarFill fill="#fff" size={15}/></span><span>{avgRating}</span></p>
+            <p className={avgRating < 4 ? 'red-rating' : 'green-rating'}><span><BsFillStarFill fill="#fff" size={15}/></span><span>{avgRating}</span></p>
             <p className="time">{deliveryTime} mins</p>
             <p className="price"><span><BsCurrencyRupee size={15}/></span><span>{costForTwo / 100} for two</span> </p>
           </div>

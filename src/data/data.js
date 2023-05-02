@@ -778,7 +778,7 @@ export const resList = [
       "data": {
         "type": "F",
         "id": "247275",
-        "name": "SHREENATH SWEETS, SNACKS AND FARSAN",
+        "name": "Shreenath Sweets, Snacks And Farsan",
         "uuid": "d749bba6-89bc-4ee4-9c17-d2fe448226c2",
         "city": "5",
         "area": "Kurla",

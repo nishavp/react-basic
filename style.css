@@ -100,7 +100,7 @@ body{
     padding: 10px 15px;
 }
 .single-card .card-title{
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 0;
     margin-bottom: 5px;
     font-weight: 700;
@@ -118,8 +118,17 @@ body{
     margin: 10px 0;
     font-size: 14px;
 }
-.rating{
+.green-rating{
     background-color: #8ec038;
+    padding: 2px 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+}
+.red-rating{
+    background-color: #da2424;
     padding: 2px 5px;
     display: inline-flex;
     justify-content: center;
@@ -139,7 +148,7 @@ body{
     text-transform: uppercase;
 }
 .about-section{
-    padding: 60px 0;
+    padding: 40px 0;
 }
 .about-section .container{
     display: flex;
@@ -171,6 +180,35 @@ body{
 }
 .about-details p{
     line-height: 1.6;
+}
+.red-btn{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #da2424;
+    transition: all 0.6s ease;
+    border-radius: 4px;
+    padding: 8px 15px;
+    text-align: center;
+    line-height: 1;
+    border:2px solid #da2424;
+}
+.red-btn:hover{
+    border:2px solid #8ec038;
+    transition: all 0.6s ease;
+}
+.about-divider img{
+    width: 100%;
+}
+.filter-section{
+    padding: 15px;
+    background-color: #f3f5ed;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 /***----- footer css -----***/

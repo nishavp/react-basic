@@ -1,10 +1,12 @@
 import { BsCheck2All } from 'react-icons/bs';
 import { IoFastFoodOutline } from 'react-icons/io5';
 import aboutImg from "../assets/images/health-bottle-cut.jpeg";
+import testimonialBg from "../assets/images/testimonials-bg.png";
 
 //about component
 const AboutComponent = () => {
     return (
+      <>
       <div className="about-section">
         <div className="container">
             <div className="cols col-1">
@@ -36,6 +38,10 @@ const AboutComponent = () => {
             </div>
         </div>
       </div>
+      <div className="about-divider">
+        <img src={testimonialBg} alt='bg'/>
+      </div>
+      </>
     );
 }
 
