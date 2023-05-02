@@ -29,4 +29,13 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 
 - Named Export/Import 
     - export const ComponentName 
-    - import {ComponentName} from "/path"
+    - import {ComponentName} from "/path" 
+
+# React Hooks 
+- There are normal js functions written by facebook developers 
+- Code is written in utility functions 
+- Two very important hooks 
+    - useState() 
+        - use to create state variable in react 
+        - IMP Point - whenever a state variable updates react re-render the components very fast 
+    - useEffect() 

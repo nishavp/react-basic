@@ -210,13 +210,18 @@ body{
     align-items: center;
     gap: 15px;
 }
+.filter-wrap{
+    display: flex;
+    align-items: center;
+    gap:15px;
+}
 
 /***----- footer css -----***/
 .footer{
     background-color: #292D35;
     position: relative;
     padding: 60px 0;
-    background-image: url('./images/footer-bg.png');
+    background-image: url('./src/assets/images/footer-bg.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
