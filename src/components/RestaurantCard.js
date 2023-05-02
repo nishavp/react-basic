@@ -1,5 +1,6 @@
 import { BsFillStarFill } from 'react-icons/bs';
 import { BsCurrencyRupee } from 'react-icons/bs';
+import { CDN_URL } from '../utils/constants';
 
 //single restaurant card component as we will resuse it
 const RestaurantCard = (props) => {
@@ -18,7 +19,7 @@ const RestaurantCard = (props) => {
     return (
       <div className="single-card">
         <div className="img-wrap">
-          <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} alt="food"/>
+          <img src={CDN_URL + cloudinaryImageId} alt="food"/>
         </div>
         <div className="card-body">
           <h4 className="card-title">{name}</h4>

@@ -1,6 +1,7 @@
 /**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
-Notes of Episodes 4 
+Notes of Episodes 4 , 5 
 
+# EPISODE 4 
 Project - Food Ordering Website 
 Structure of Project (Main Components) 
 
@@ -20,3 +21,12 @@ Structure of Project (Main Components)
 API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING 
 
 
+# EPISODE 5 
+# Two types Export/Import 
+- Default Export/Import 
+    - export default ComponentName 
+    - import ComponentName from "/path"
+
+- Named Export/Import 
+    - export const ComponentName 
+    - import {ComponentName} from "/path"
