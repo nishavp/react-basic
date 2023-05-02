@@ -1,9 +1,9 @@
 //importing react when cdn links are removed
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { resList } from "./data";
 import logo from "./images/logo.png";
 import cart from "./images/cart.png";
-import food1 from "./images/food1.jpeg";
 import { SlEmotsmile } from 'react-icons/sl';
 import { BsFillStarFill } from 'react-icons/bs';
 import { BsCurrencyRupee } from 'react-icons/bs';
@@ -39,19 +39,20 @@ const HeaderComponent = () => {
 }
 
 //single restaurant card component as we will resuse it
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const { resData } = props;
   return (
     <div className="single-card">
       <div className="img-wrap">
-        <img src={food1} alt="food"/>
+        <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + resData.data.cloudinaryImageId} alt="food"/>
       </div>
       <div className="card-body">
-        <h4 className="card-title">Food Name</h4>
-        <p className="cusine-name">Chinese, North Indian</p>
+        <h4 className="card-title">{resData.data.name}</h4>
+        <p className="cusine-name">{resData.data.cuisines.join(', ')}</p>
         <div className="card-inner-details">
-          <p className="rating"><span><BsFillStarFill fill="#fff" size={15}/></span><span>4.4</span></p>
-          <p className="time">38 mins</p>
-          <p className="price"><span><BsCurrencyRupee size={15}/></span><span>500 for two</span> </p>
+          <p className="rating"><span><BsFillStarFill fill="#fff" size={15}/></span><span>{resData.data.avgRating}</span></p>
+          <p className="time">{resData.data.deliveryTime} mins</p>
+          <p className="price"><span><BsCurrencyRupee size={15}/></span><span>{resData.data.costForTwo / 100} for two</span> </p>
         </div>
       </div>
     </div>
@@ -107,9 +108,9 @@ const BodyLayout = () => {
               <h2 className="heading-center"><span>Choose your favourite Food</span> <SlEmotsmile fill="#8ec038" size={35}/></h2>    
             </div>
             <div className="card-grid">
-              <RestaurantCard/>
-              <RestaurantCard/>
-              <RestaurantCard/>
+              {
+                resList.map((restaurant) => (<RestaurantCard resData={restaurant}/>))
+              }
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@ const FooterLayout = () => {
             </div>
           </div>
           <div className="footer-bottom">
-              <p>Developed By Nisha Prasad !!</p>
+              <p>Design & Developed By Nisha Prasad !!</p>
           </div>
       </footer>
     </div>
