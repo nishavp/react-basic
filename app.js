@@ -109,7 +109,7 @@ const BodyLayout = () => {
             </div>
             <div className="card-grid">
               {
-                resList.map((restaurant) => (<RestaurantCard resData={restaurant}/>))
+                resList.map((restaurant) => (<RestaurantCard key={restaurant.data.id} resData={restaurant}/>))
               }
             </div>
           </div>
