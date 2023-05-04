@@ -9,7 +9,7 @@ import { SlEmotsmile } from "react-icons/sl";
 function filterSearchData(searchText, listOfRestaurant) {
   const lowerCaseSearchText = searchText.toLowerCase();
   const resultData = listOfRestaurant.filter((res) =>
-    res.data.name.toLowerCase().includes(lowerCaseSearchText)
+    res?.data?.name?.toLowerCase().includes(lowerCaseSearchText)
   );
 
   return resultData;
@@ -29,7 +29,7 @@ const BodyLayout = () => {
   useEffect(() => {
     //console.log("call when this dependency is changed");
     getRestaurantList();
-  }, [setListOfRestaurant]);
+  }, []);
 
   async function getRestaurantList() {
     const data = await fetch(
@@ -110,7 +110,7 @@ const BodyLayout = () => {
                     // call the function ie search the text in the list of restaurant
                     const searchData = filterSearchData(
                       searchText, // search value
-                      listOfRestaurant // list of restaurant
+                      listOfRestaurant // list of restaurant search from original list
                     );
                     // update list of filtered restaurant
                     setListOfFilteredRestaurant(searchData);
