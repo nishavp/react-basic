@@ -1,5 +1,5 @@
 /**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
-Notes of Episodes 4 , 5 
+Notes of Episodes 4 , 5 , 6
 
 # EPISODE 4 
 Project - Food Ordering Website 
@@ -39,3 +39,17 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
         - use to create state variable in react 
         - IMP Point - whenever a state variable updates react re-render the components very fast 
     - useEffect() 
+        - Its a hook which is normal javascript function 
+        - Take 2 parameter [callback function and dependency array]
+        - After every render the react will call the function which is mention in useEffect(). 
+        - So its if we do want to call it everytime pass the dependency array to it.
+        - Re-render happens when any state changes or props changes
+
+# React Fibre 
+- Link : https://github.com/acdlite/react-fiber-architecture 
+
+# EPISODE 6 
+- API call 
+
+
+
