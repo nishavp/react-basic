@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import AboutComponent from "./About";
 import RestaurantCard from "./RestaurantCard";
+import CardShimmer from "./CardShimmer";
 import { resList } from "../data/data";
 import { SlEmotsmile } from "react-icons/sl";
 
@@ -19,6 +20,7 @@ const BodyLayout = () => {
   // In useState(resList) we have passed the mock data or api data
   // const [set the variable , function to update the variable] = useState(pass the mock data values)
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
+  const [listOfFilteredRestaurant, setListOfFilteredRestaurant] = useState([]);
   // search text useState
   const [searchText, setSearchText] = useState("");
 
@@ -35,8 +37,12 @@ const BodyLayout = () => {
     );
     const json = await data.json();
     console.log(json);
+    // will set the initial value for both states
     setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setListOfFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   }
+
+  if (!listOfRestaurant) return null;
 
   return (
     <div className="body-layout">
@@ -57,7 +63,7 @@ const BodyLayout = () => {
                   className="filter-single-btn"
                   onClick={() => {
                     //Filter logic code for all cards
-                    setListOfRestaurant(resList);
+                    setListOfFilteredRestaurant(resList);
                   }}
                 >
                   Show All
@@ -69,7 +75,7 @@ const BodyLayout = () => {
                     const filteredList = resList.filter(
                       (result) => result?.data?.avgRating > 4
                     );
-                    setListOfRestaurant(filteredList);
+                    setListOfFilteredRestaurant(filteredList);
                     //console.log(filteredList);
                   }}
                 >
@@ -82,7 +88,7 @@ const BodyLayout = () => {
                     const filteredList = resList.filter(
                       (result) => result?.data?.avgRating < 4
                     );
-                    setListOfRestaurant(filteredList);
+                    setListOfFilteredRestaurant(filteredList);
                     //console.log(filteredList);
                   }}
                 >
@@ -106,8 +112,8 @@ const BodyLayout = () => {
                       searchText, // search value
                       listOfRestaurant // list of restaurant
                     );
-                    // update list of restaurant
-                    setListOfRestaurant(searchData);
+                    // update list of filtered restaurant
+                    setListOfFilteredRestaurant(searchData);
                   }}
                 >
                   Search
@@ -115,11 +121,27 @@ const BodyLayout = () => {
               </div>
             </div>
           </div>
-          <div className="card-grid">
-            {listOfRestaurant.map((restaurant) => (
-              <RestaurantCard key={restaurant.data.id} resData={restaurant} />
-            ))}
-          </div>
+          {listOfRestaurant.length === 0 ? (
+            //loading blank data till API loads actual data
+            <CardShimmer />
+          ) : (
+            <>
+              {listOfFilteredRestaurant.length === 0 ? (
+                <div className="msg-wrap">
+                  <p>No data found</p>
+                </div>
+              ) : (
+                <div className="card-grid">
+                  {listOfFilteredRestaurant.map((restaurant) => (
+                    <RestaurantCard
+                      key={restaurant.data.id}
+                      resData={restaurant}
+                    />
+                  ))}
+                </div>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>

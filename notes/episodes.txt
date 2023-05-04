@@ -50,6 +50,7 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 
 # EPISODE 6 
 - API call 
+- created shimmer UI - a loading components before the actual data loads from the API
 
 
 

@@ -266,6 +266,22 @@ input , button {
     font-size: 15px;
     margin-right: 10px;
 }
+.loading-cards-grid{
+    grid-template-columns: 31% 31% 31%;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 30px;
+    display: grid;
+}
+.loading-cards .single-card{
+    min-height: 350px;
+}
+.msg-wrap p{
+    text-align: center;
+    font-size: 20px;
+    margin: 40px 0;
+    text-transform: capitalize;
+}
 
 /***----- footer css -----***/
 .footer{
