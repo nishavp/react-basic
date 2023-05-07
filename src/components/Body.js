@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AboutComponent from "./About";
+import HomeAboutComponent from "./HomeAbout";
 import RestaurantCard from "./RestaurantCard";
 import CardShimmer from "./CardShimmer";
 import { resList } from "../data/data";
@@ -46,7 +46,7 @@ const BodyLayout = () => {
 
   return (
     <div className="body-layout">
-      <AboutComponent />
+      <HomeAboutComponent />
       <div className="container">
         <div className="card-listing">
           <div className="section-heading">

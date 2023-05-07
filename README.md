@@ -11,15 +11,19 @@ If repo clone from github
 
 - npm install (as all details are mentioned in package-lock.json)
 
-To build development app
+# To build development app
 
 - npm run start or npm run
 
-To build production app
+# To build production app
 
 - npm run build
 
-To add Icons
+# To add Icons
 
 - npm install react-icons --save
 - link : https://react-icons.github.io/react-icons
+
+# React Router
+
+- npm i react-router-dom

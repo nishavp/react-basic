@@ -1,5 +1,5 @@
 /**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
-Notes of Episodes 4 , 5 , 6
+Notes of Episodes 4 , 5 , 6 , 7
 
 # EPISODE 4 
 Project - Food Ordering Website 
@@ -41,9 +41,11 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
     - useEffect() 
         - Its a hook which is normal javascript function 
         - Take 2 parameter [callback function and dependency array]
-        - After every render the react will call the function which is mention in useEffect(). 
-        - So its if we do want to call it everytime pass the dependency array to it.
+        - After every render the react will call the function which is mention in useEffect() 
         - Re-render happens when any state changes or props changes
+        - So if we pass nothing in useEffect() => it will be called after every render 
+        - If we pass empty array => it will call only once after render 
+        - If we pass any state variable => then it will be call everytime when the state variable changes 
 
 # React Fibre 
 - Link : https://github.com/acdlite/react-fiber-architecture 
@@ -53,4 +55,6 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 - created shimmer UI - a loading components before the actual data loads from the API
 
 
-
+# EPISODE 7 
+- React Router
+- Doc : https://reactrouter.com/en/main
