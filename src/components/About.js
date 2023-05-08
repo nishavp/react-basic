@@ -1,6 +1,10 @@
 //about component
-const AboutComponent = () => {
-  return <></>;
+const About = () => {
+  return (
+    <>
+      <p>about page</p>
+    </>
+  );
 };
 
-export default AboutComponent;
+export default About;
