@@ -18,6 +18,9 @@ input , button {
     text-align: center;
     justify-content: center;
 }
+.main-section {
+    padding-top: 85px;
+}
 
 /***----- header css -----***/
 .headerlayout{
@@ -51,6 +54,8 @@ input , button {
     padding: 5px 15px;
     cursor: pointer;
     font-size: 18px;
+    color: #171422;
+    text-decoration: none;
 }
 .menuLinks ul li a:hover{
     color:#8ec038;
@@ -282,6 +287,30 @@ input , button {
     margin: 40px 0;
     text-transform: capitalize;
 }
+.about-page-section{
+    text-align: center;
+    padding: 40px 0;
+}
+.about-page-section h2{
+    justify-content: center;
+}
+
+/***----- error page css -----***/
+.error-wrap{
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.green-text{
+    color: #8ec038;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
 
 /***----- footer css -----***/
 .footer{
@@ -351,8 +380,9 @@ input , button {
     gap:50px
 }
 
-.footer  p {
+.footer p {
     color: #fff;
+    line-height: 1.5;
 }
 
 .footer  a{
@@ -417,4 +447,26 @@ input , button {
     position: absolute;
     width: 100%;
     bottom: 0;
+}
+
+/**-- restaurant detail page --**/
+.menu-page-section{
+    padding: 40px 0;
+}
+.menu-main-details{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 20% 70%;
+}
+.mcol1 img{
+    width: 100%;
+    border-radius: 4px;
+}
+.mcol2 h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.mcol2 p{
+    margin-top: 0;
+    margin-bottom: 10px;
 }

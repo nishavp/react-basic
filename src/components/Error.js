@@ -1,4 +1,6 @@
 import { useRouteError } from "react-router-dom";
+import HeaderComponent from "./Header";
+import FooterLayout from "./Footer";
 
 //error component
 const Error = () => {
@@ -7,8 +9,16 @@ const Error = () => {
   // console.log(err);
   return (
     <>
-      <p>Error page</p>
-      <p>{err.status + " : " + err.statusText}</p>
+      <HeaderComponent />
+      <div className="error-wrap">
+        <h2 className="green-text">Oops! Page Not Found</h2>
+        <p>
+          The page you are looking for was moved, removed, renamed or might
+          never existed.
+        </p>
+        {/* <p>{err.status + " : " + err.statusText}</p> */}
+      </div>
+      <FooterLayout />
     </>
   );
 };

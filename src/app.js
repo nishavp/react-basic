@@ -1,19 +1,21 @@
 //importing react when cdn links are removed
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/Header";
+import Contact from "./components/Contact";
 import BodyLayout from "./components/Body";
 import FooterLayout from "./components/Footer";
 import About from "./components/About";
 import Error from "./components/Error";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 //main layout
 const AppLayout = () => {
   return (
     <div className="app">
       <HeaderComponent />
-      <BodyLayout />
+      <Outlet />
       <FooterLayout />
     </div>
   );
@@ -25,10 +27,24 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <AppLayout />,
     errorElement: <Error />,
-  },
-  {
-    path: "about-us",
-    element: <About />,
+    children: [
+      {
+        path: "/",
+        element: <BodyLayout />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "/restaurant/:restaurantId",
+        element: <RestaurantMenu />,
+      },
+    ],
   },
 ]);
 

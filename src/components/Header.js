@@ -1,5 +1,6 @@
 import logo from "../assets/images/logo.png";
 import cart from "../assets/images/cart.png";
+import { Link } from "react-router-dom";
 
 //header component
 const HeaderComponent = () => {
@@ -8,18 +9,20 @@ const HeaderComponent = () => {
       <div className="container">
         <div className="headerWrap">
           <div className="logowrap">
-            <img src={logo} alt="logo" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <div className="menuLinks">
             <ul>
               <li>
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a>About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
-                <a>Contact Us</a>
+                <Link to="contact">Contact Us</Link>
               </li>
               <li>
                 <a>

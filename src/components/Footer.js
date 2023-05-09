@@ -2,6 +2,7 @@ import footerLogo from "../assets/images/logo-white.png";
 import { FiChevronRight } from "react-icons/fi";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 //footer component
 const FooterLayout = () => {
@@ -48,15 +49,15 @@ const FooterLayout = () => {
             <ul className="footer-list">
               <li>
                 <FiChevronRight stroke="#8ec038" />
-                <a>Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <FiChevronRight stroke="#8ec038" />
-                <a>About</a>
+                <Link to="/about">About</Link>
               </li>
               <li>
                 <FiChevronRight stroke="#8ec038" />
-                <a>Restaurant</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>

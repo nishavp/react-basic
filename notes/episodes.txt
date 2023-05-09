@@ -58,3 +58,6 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 # EPISODE 7 
 - React Router
 - Doc : https://reactrouter.com/en/main
+- Outlet is used to pass component between Header and Footer 
+- UseParams - to read dynamic url 
+
