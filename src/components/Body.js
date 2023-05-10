@@ -4,6 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import CardShimmer from "./CardShimmer";
 import { resList } from "../data/data";
 import { SlEmotsmile } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 // search logic in the below function
 function filterSearchData(searchText, listOfRestaurant) {
@@ -36,7 +37,7 @@ const BodyLayout = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    //console.log(json);
     // will set the initial value for both states
     setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     setListOfFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
@@ -133,10 +134,12 @@ const BodyLayout = () => {
               ) : (
                 <div className="card-grid">
                   {listOfFilteredRestaurant.map((restaurant) => (
-                    <RestaurantCard
+                    <Link
+                      to={"/restaurant/" + restaurant.data.id}
                       key={restaurant.data.id}
-                      resData={restaurant}
-                    />
+                    >
+                      <RestaurantCard resData={restaurant} />
+                    </Link>
                   ))}
                 </div>
               )}

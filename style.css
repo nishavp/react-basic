@@ -310,7 +310,13 @@ input , button {
     font-weight: 700;
     margin: 10px 0;
 }
-
+.card-grid a{
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #171422;
+    cursor: pointer;
+}
 
 /***----- footer css -----***/
 .footer{
