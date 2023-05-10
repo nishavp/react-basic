@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BsFillStarFill } from "react-icons/bs";
-import { CDN_URL } from "../utils/constants";
+import { CDN_URL, MENU_ITEM_URL } from "../utils/constants";
 
 //restaurant detail page component
 const RestaurantMenu = () => {
@@ -73,14 +73,28 @@ const RestaurantMenu = () => {
               </div>
             </div>
             <div className="menu-list">
-              <p>
-                <strong>Menu List</strong>
-              </p>
-              <ul>
+              <br />
+              <h2>Menu Item List</h2>
+              <div className="menu-list-ul">
                 {Object.values(menuList).map((item) => (
-                  <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
+                  <div key={item?.card?.info?.id} className="menu-list-wrap">
+                    <div className="m1-col">
+                      <div className="img-wrapper">
+                        <img
+                          src={MENU_ITEM_URL + item?.card?.info?.imageId}
+                          alt="food"
+                        />
+                      </div>
+                    </div>
+                    <div className="m2-col">
+                      <h4>{item?.card?.info?.name}</h4>
+                      <p>{item?.card?.info?.category}</p>
+                      <p>{item?.card?.info?.description}</p>
+                      <p>Rs. {item?.card?.info?.price}/-</p>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+              </div>
               {/* {console.log(Object.values(menuList))} */}
             </div>
           </div>

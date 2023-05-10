@@ -7,6 +7,10 @@
     .container{
         width: 90%;
     }
+    .menu-list-ul li {
+        display: grid;
+        grid-template-columns: 40% 30%;
+    }
 }
 
 /* Portrait */
@@ -85,6 +89,10 @@
     }
     .footer-subtitle{
         font-size: 18px;
+    }
+    .menu-list-ul li {
+        display: grid;
+        grid-template-columns: 60% 30%;
     }
 
 }

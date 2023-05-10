@@ -1,5 +1,5 @@
 /**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
-Notes of Episodes 4 , 5 , 6 , 7
+Notes of Episodes 4 , 5 , 6 , 7 , 8
 
 # EPISODE 4 
 Project - Food Ordering Website 
@@ -60,4 +60,9 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 - Doc : https://reactrouter.com/en/main
 - Outlet is used to pass component between Header and Footer 
 - UseParams - to read dynamic url 
+
+
+# EPISODE 8 
+- Class Based Components 
+
 
