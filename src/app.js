@@ -9,6 +9,7 @@ import FooterLayout from "./components/Footer";
 import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import ProfileClass from "./components/ProfileClass";
 
 //main layout
 const AppLayout = () => {
@@ -38,6 +39,7 @@ const appRouter = createBrowserRouter([
         children: [
           {
             path: "profile", // It will create sub path => http://localhost:1234/about/profile
+            element: <ProfileClass />,
           },
         ],
       },

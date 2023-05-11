@@ -64,5 +64,7 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 
 # EPISODE 8 
 - Class Based Components 
+- this.state.name == display the state variable value 
+- this.props.date == display the props variable value 
 
 

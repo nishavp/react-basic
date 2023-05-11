@@ -1,3 +1,5 @@
+import ProfileClass from "./ProfileClass";
+
 //about component
 const About = () => {
   return (
@@ -25,6 +27,9 @@ const About = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div className="profile-wrap">
+        <ProfileClass />
       </div>
     </>
   );
