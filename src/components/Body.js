@@ -5,16 +5,7 @@ import CardShimmer from "./CardShimmer";
 import { resList } from "../data/data";
 import { SlEmotsmile } from "react-icons/sl";
 import { Link } from "react-router-dom";
-
-// search logic in the below function
-function filterSearchData(searchText, listOfRestaurant) {
-  const lowerCaseSearchText = searchText.toLowerCase();
-  const resultData = listOfRestaurant.filter((res) =>
-    res?.data?.name?.toLowerCase().includes(lowerCaseSearchText)
-  );
-
-  return resultData;
-}
+import { filterSearchData } from "../utils/helper";
 
 //body layout will have search and restaurant cards
 const BodyLayout = () => {

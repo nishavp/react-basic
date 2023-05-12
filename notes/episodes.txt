@@ -66,5 +66,17 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 - Class Based Components 
 - this.state.name == display the state variable value 
 - this.props.date == display the props variable value 
+- componentDidMount 
+- componentWillUnmount 
+- componentDidUpdate 
+- Class Based Component Recycle 
+    - Render Phase 
+    - Commit Phase 
 
+
+# EPISODE 9 
+- created helper.js file to keep all common functions which can be reuseable in other component 
+- We can create separate file for Hooks - also that will make our code in maintainable 
+- Always start with "use" keyword as React Naming Convention eg useRestaurant 
+- 
 

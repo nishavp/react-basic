@@ -22,7 +22,15 @@ class ProfileClass extends React.Component {
     const json = await data.json();
     // directly set the value using setState
     this.setState({ userInfo: json });
-    console.log("component did mount");
+    //console.log("Child component did mount");
+  }
+
+  componentDidUpdate() {
+    //console.log("componenetDidUpdated Called");
+  }
+
+  componentWillUnmount() {
+    //console.log("componentWillUnmount Called");
   }
 
   render() {

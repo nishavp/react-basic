@@ -1,39 +1,16 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BsFillStarFill } from "react-icons/bs";
 import { CDN_URL, MENU_ITEM_URL } from "../utils/constants";
+import useRestaurant from "../utils/useRestaurant";
 
 //restaurant detail page component
 const RestaurantMenu = () => {
   // read dynamic url using useParams
   const { restaurantId } = useParams();
-  const [restaurant, setRestaurant] = useState({});
-  const [menuList, setMenuList] = useState({});
 
-  useEffect(() => {
-    //console.log("call when this dependency is changed");
-    getRestaurantInfo();
-  }, []);
-
-  // API call pass the dynamic id to get the restaurant details
-  async function getRestaurantInfo() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=" +
-        restaurantId
-    );
-    const json = await data.json();
-    //console.log(json.data);
-    setRestaurant(json.data?.cards[0]?.card?.card);
-    setMenuList(
-      json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-        ?.card?.itemCards
-    );
-    // console.log(
-    //   json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
-    //     ?.card?.itemCards
-    // );
-  }
-
+  // call the export from custom hook and passing the restaurant Id as parameter
+  // restaurant, menuList these 2 are return from the function so can be access here
+  const { restaurant, menuList } = useRestaurant(restaurantId);
   if (!restaurant) return null;
   if (!menuList) return null;
 
