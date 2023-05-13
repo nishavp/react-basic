@@ -11,13 +11,13 @@ const useRestaurantList = () => {
   // Because we want to execute when list state changes
   useEffect(() => {
     //console.log("call when this dependency is changed");
-    getRestaurantList(setListOfRestaurant, setListOfFilteredRestaurant);
+    getRestaurantList();
   }, []);
 
   async function getRestaurantList() {
     const data = await fetch(RESTAURANT_LIST);
     const json = await data.json();
-    console.log(json);
+    // console.log(json);
     // will set the initial value for both states
     setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     setListOfFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
