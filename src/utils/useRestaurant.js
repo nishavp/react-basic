@@ -1,5 +1,6 @@
 // this is example ie a separate file for listing restaurant menu from the API.
 import { useEffect, useState } from "react";
+import { FETCH_MENU_URL } from "./constants";
 
 const useRestaurant = (restaurantId) => {
   // create useState variable for maintaining the API data in the state and returining at end of the function
@@ -13,10 +14,7 @@ const useRestaurant = (restaurantId) => {
 
   // API call pass the dynamic id to get the restaurant details
   async function getRestaurantInfo() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.0759837&lng=72.8776559&restaurantId=" +
-        restaurantId
-    );
+    const data = await fetch(FETCH_MENU_URL + restaurantId);
     const json = await data.json();
     //console.log(json.data);
     setRestaurant(json.data?.cards[0]?.card?.card);

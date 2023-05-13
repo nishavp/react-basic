@@ -1,38 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import HomeAboutComponent from "./HomeAbout";
 import RestaurantCard from "./RestaurantCard";
 import CardShimmer from "./CardShimmer";
-import { resList } from "../data/data";
+// import { resList } from "../data/data";
 import { SlEmotsmile } from "react-icons/sl";
 import { Link } from "react-router-dom";
+import useRestaurantList from "../utils/useRestaurantList";
 import { filterSearchData } from "../utils/helper";
 
 //body layout will have search and restaurant cards
 const BodyLayout = () => {
-  // In useState(resList) we have passed the mock data or api data
-  // const [set the variable , function to update the variable] = useState(pass the mock data values)
-  const [listOfRestaurant, setListOfRestaurant] = useState([]);
-  const [listOfFilteredRestaurant, setListOfFilteredRestaurant] = useState([]);
   // search text useState
   const [searchText, setSearchText] = useState("");
-
-  // calling getRestaurantList() function in useEffect() and passing setListOfRestaurant as the state.
-  // Because we want to execute when list state changes
-  useEffect(() => {
-    //console.log("call when this dependency is changed");
-    getRestaurantList();
-  }, []);
-
-  async function getRestaurantList() {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    //console.log(json);
-    // will set the initial value for both states
-    setListOfRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-    setListOfFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-  }
+  const {
+    listOfRestaurant,
+    listOfFilteredRestaurant,
+    setListOfFilteredRestaurant,
+  } = useRestaurantList();
 
   if (!listOfRestaurant) return null;
 
@@ -55,7 +39,7 @@ const BodyLayout = () => {
                   className="filter-single-btn"
                   onClick={() => {
                     //Filter logic code for all cards
-                    setListOfFilteredRestaurant(resList);
+                    setListOfFilteredRestaurant(listOfRestaurant);
                   }}
                 >
                   Show All
@@ -64,7 +48,7 @@ const BodyLayout = () => {
                   className="filter-single-btn"
                   onClick={() => {
                     //Filter logic code for top rated cards
-                    const filteredList = resList.filter(
+                    const filteredList = listOfRestaurant.filter(
                       (result) => result?.data?.avgRating > 4
                     );
                     setListOfFilteredRestaurant(filteredList);
@@ -77,7 +61,7 @@ const BodyLayout = () => {
                   className="filter-single-btn"
                   onClick={() => {
                     //Filter logic code for top rated cards
-                    const filteredList = resList.filter(
+                    const filteredList = listOfRestaurant.filter(
                       (result) => result?.data?.avgRating < 4
                     );
                     setListOfFilteredRestaurant(filteredList);
