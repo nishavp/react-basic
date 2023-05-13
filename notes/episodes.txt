@@ -79,5 +79,14 @@ API - https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776
 - We can create separate file for Hooks - also that will make our code in maintainable 
 - Always start with "use" keyword as React Naming Convention eg useRestaurant 
 - Feature - To check internet connection 
-
+- Optimize Our App 
+- Create small bundles (Also called by below names)
+    - Chunking 
+    - Code Spliting 
+    - Dynamic Import 
+    - Dynamic Bundling 
+    - Lazy Loading 
+    - On Demand Loading 
+- Use of lazy and Suspense - Dynamic Loading 
+- Suspense - takes a fallback parameter. In that we can show shimmer tills the component loads fully.
 

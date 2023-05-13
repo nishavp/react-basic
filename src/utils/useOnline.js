@@ -1,4 +1,4 @@
-// This is custom feature hook to check whether user is online or offline
+// This is custom feature hook to check whether user is online or offline. To use this check header component.
 import { useState, useEffect } from "react";
 const useOnline = () => {
   // create state for the same

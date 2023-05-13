@@ -1,5 +1,5 @@
 //importing react when cdn links are removed
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/Header";
@@ -10,6 +10,10 @@ import About from "./components/About";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
+import CardShimmer from "./components/CardShimmer";
+
+// to create separate bundle, we have to create dynamic import
+const Instamart = lazy(() => import("./components/Instamart"));
 
 //main layout
 const AppLayout = () => {
@@ -50,6 +54,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:restaurantId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<CardShimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
     ],
   },

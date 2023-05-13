@@ -18,9 +18,32 @@ input , button {
     text-align: center;
     justify-content: center;
 }
-.main-section {
-    padding-top: 85px;
+.body-layout ,.main-section {
+    padding-top: 110px;
 }
+.green-signal{
+    background-color: #8EC038;
+}
+.green-signal p{
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+    line-height: 1;
+    color: #fff;
+}
+.red-signal {
+    background-color: #da2424;
+}
+.red-signal p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+    line-height: 1;
+    color: #fff;
+}
+
 
 /***----- header css -----***/
 .headerlayout{
@@ -66,9 +89,7 @@ input , button {
 }
 
 /***----- body css -----***/
-.body-layout{
-    padding-top: 85px;
-}
+
 .card-listing{
     padding-top: 20px;
     padding-bottom: 40px;
