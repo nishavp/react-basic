@@ -7,6 +7,7 @@ import { SlEmotsmile } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import useRestaurantList from "../utils/useRestaurantList";
 import { filterSearchData } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 //body layout will have search and restaurant cards
 const BodyLayout = () => {
@@ -17,6 +18,24 @@ const BodyLayout = () => {
     listOfFilteredRestaurant,
     setListOfFilteredRestaurant,
   } = useRestaurantList();
+
+  const isOnline = useOnline();
+
+  if (!isOnline) {
+    return (
+      <div className="offline-msg">
+        <div className="main-section">
+          <div className="container">
+            <br />
+            <br />
+            <h2>You are offline !! Please check your internet connection.</h2>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!listOfRestaurant) return null;
 
