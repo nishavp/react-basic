@@ -1,0 +1,10 @@
+/**----THIS FILE IS FOR SELF FOR REMEMBER THINGS IN FUTURE----**/
+Notes of Episodes 10 - Tailwind CSS 
+
+- Open source css framework 
+- CSS can be written in same file ie inline css so its faster 
+- Reuseablity 
+- Has lot of predefined classes 
+- Less Bundle size 
+- Used to Flexible UI - can be customize 
+ 

@@ -27,3 +27,7 @@ If repo clone from github
 # React Router
 
 - npm i react-router-dom
+
+# Tailwind CSS - Install Tailwind CSS with Parcel
+
+- Link : https://tailwindcss.com/docs/guides/parcel
