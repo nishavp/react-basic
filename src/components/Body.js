@@ -27,12 +27,12 @@ const BodyLayout = () => {
         <div className="card-listing">
           <div className="section-heading">
             <h2 className="heading-center">
-              <span>Choose your favourite Food</span>{" "}
+              <span className="font-extrabold">Choose your favourite Food</span>{" "}
               <SlEmotsmile fill="#8ec038" size={35} />
             </h2>
           </div>
           <div className="filter-section">
-            <div className="filter-wrap">
+            <div className="filter-wrap xs:flex-col sm:flex-col md:flex-row">
               <div className="fiter-btns">
                 <p>Filter</p>
                 <button

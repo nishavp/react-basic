@@ -13,7 +13,7 @@ const HomeAboutComponent = () => {
             <div className="about-details">
               <div className="section-heading">
                 <h2>
-                  <span>
+                  <span className="font-extrabold">
                     Healthy and <br /> tasty foods{" "}
                   </span>{" "}
                   <IoFastFoodOutline

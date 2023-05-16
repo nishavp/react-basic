@@ -8,7 +8,7 @@ const About = () => {
         <div className="container">
           <div className="about-page-section">
             <div className="section-heading">
-              <h2>
+              <h2 className="font-extrabold">
                 <span>Why customer choose Us </span>
               </h2>
             </div>
