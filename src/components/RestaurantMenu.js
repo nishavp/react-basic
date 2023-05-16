@@ -1,6 +1,10 @@
 import { useParams } from "react-router-dom";
 import { BsFillStarFill } from "react-icons/bs";
-import { CDN_URL, MENU_ITEM_URL } from "../utils/constants";
+import {
+  CDN_URL,
+  MENU_ITEM_URL,
+  MENU_ITEM_PLACEHOLDER,
+} from "../utils/constants";
 import useRestaurant from "../utils/useRestaurant";
 
 //restaurant detail page component
@@ -29,7 +33,7 @@ const RestaurantMenu = () => {
                 </div>
               </div>
               <div className="mcol2">
-                <h2>{restaurant?.info?.name}</h2>
+                <h2 className="font-bold text-xl">{restaurant?.info?.name}</h2>
                 <p className="cusine-name">
                   {restaurant?.info?.cuisines.join(", ")}
                 </p>
@@ -51,23 +55,31 @@ const RestaurantMenu = () => {
             </div>
             <div className="menu-list">
               <br />
-              <h2>Menu Item List</h2>
+              <h2 className="font-bold text-xl">Menu Item List</h2>
               <div className="menu-list-ul">
                 {Object.values(menuList).map((item) => (
                   <div key={item?.card?.info?.id} className="menu-list-wrap">
                     <div className="m1-col">
                       <div className="img-wrapper">
                         <img
-                          src={MENU_ITEM_URL + item?.card?.info?.imageId}
+                          src={
+                            item?.card?.info?.imageId == undefined
+                              ? MENU_ITEM_PLACEHOLDER
+                              : MENU_ITEM_URL + item?.card?.info?.imageId
+                          }
                           alt="food"
                         />
+                        {/* <img
+                          src={MENU_ITEM_URL + item?.card?.info?.imageId}
+                          alt="food"
+                        /> */}
                       </div>
                     </div>
                     <div className="m2-col">
-                      <h4>{item?.card?.info?.name}</h4>
-                      <p>{item?.card?.info?.category}</p>
-                      <p>{item?.card?.info?.description}</p>
-                      <p>Rs. {item?.card?.info?.price}/-</p>
+                      <h4 className="font-bold">{item?.card?.info?.name}</h4>
+                      <p className="text-sm">{item?.card?.info?.category}</p>
+                      <p className="text-sm">{item?.card?.info?.description}</p>
+                      <p className="text-sm">Rs. {item?.card?.info?.price}/-</p>
                     </div>
                   </div>
                 ))}

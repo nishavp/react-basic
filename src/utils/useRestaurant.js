@@ -4,8 +4,8 @@ import { FETCH_MENU_URL } from "./constants";
 
 const useRestaurant = (restaurantId) => {
   // create useState variable for maintaining the API data in the state and returining at end of the function
-  const [restaurant, setRestaurant] = useState({});
-  const [menuList, setMenuList] = useState({});
+  const [restaurant, setRestaurant] = useState(null);
+  const [menuList, setMenuList] = useState(null);
 
   useEffect(() => {
     //console.log("call when this dependency is changed");
@@ -19,7 +19,7 @@ const useRestaurant = (restaurantId) => {
     //console.log(json.data);
     setRestaurant(json.data?.cards[0]?.card?.card);
     setMenuList(
-      json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card
+      json.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
         ?.card?.itemCards
     );
   }
