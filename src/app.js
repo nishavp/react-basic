@@ -11,6 +11,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
 import CardShimmer from "./components/CardShimmer";
+import AccordionExample from "./components/AccordionExample";
 
 // to create separate bundle, we have to create dynamic import
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -50,6 +51,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "accordion",
+        element: <AccordionExample />,
       },
       {
         path: "/restaurant/:restaurantId",

@@ -43,7 +43,9 @@ input , button {
     line-height: 1;
     color: #fff;
 }
-
+.section-main-wrapper{
+    padding: 50px 0;
+}
 
 /***----- header css -----***/
 .headerlayout{

@@ -5,8 +5,8 @@ import {
   BsArrowRightSquareFill,
 } from "react-icons/bs";
 
-const Section = ({ title, description, isVisible, setIsVisible }) => {
-  //const [isVisible, setIsVisible] = useState(false);
+const Section = ({ title, description }) => {
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="section-wrap my-5">
       <div className="flex justify-between items-center p-3 border rounded border-gray-800">
@@ -36,9 +36,7 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
   );
 };
 
-const Instamart = () => {
-  // parent control over child state variable
-  const [visibleSection, setIsVisibleSection] = useState("about");
+const BasicAccordion = () => {
   return (
     <>
       <div className="main-section">
@@ -46,40 +44,32 @@ const Instamart = () => {
           <div className="section-main-wrapper">
             <div className="instamart-page-section">
               <h5 className="font-bold underline underline-offset-4">
-                This is example for Lifting the state up. ie Parent control over
-                child components
+                This is basic accordion. Here child has its own control of Hide
+                and Show
               </h5>
               <Section
                 title={"About"}
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                isVisible={visibleSection == "about"}
-                setIsVisible={() => setIsVisibleSection("about")}
               />
               <Section
                 title={"Our Team"}
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                isVisible={visibleSection == "team"}
-                setIsVisible={() => setIsVisibleSection("team")}
               />
               <Section
                 title={"Our Clients"}
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                isVisible={visibleSection == "client"}
-                setIsVisible={() => setIsVisibleSection("client")}
               />
               <Section
                 title={"Career"}
                 description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                isVisible={visibleSection == "career"}
-                setIsVisible={() => setIsVisibleSection("career")}
               />
             </div>
           </div>
@@ -89,4 +79,4 @@ const Instamart = () => {
   );
 };
 
-export default Instamart;
+export default BasicAccordion;
