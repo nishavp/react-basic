@@ -55,7 +55,14 @@ const Instamart = () => {
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
                 isVisible={visibleSection == "about"}
-                setIsVisible={() => setIsVisibleSection("about")}
+                setIsVisible={(display) => {
+                  // to hide again on click this condition is used
+                  if (display) {
+                    setIsVisibleSection("about");
+                  } else {
+                    setIsVisibleSection("");
+                  }
+                }}
               />
               <Section
                 title={"Our Team"}
@@ -63,7 +70,13 @@ const Instamart = () => {
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
                 isVisible={visibleSection == "team"}
-                setIsVisible={() => setIsVisibleSection("team")}
+                setIsVisible={(display) => {
+                  if (display) {
+                    setIsVisibleSection("team");
+                  } else {
+                    setIsVisibleSection("");
+                  }
+                }}
               />
               <Section
                 title={"Our Clients"}
@@ -71,7 +84,13 @@ const Instamart = () => {
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
                 isVisible={visibleSection == "client"}
-                setIsVisible={() => setIsVisibleSection("client")}
+                setIsVisible={(display) => {
+                  if (display) {
+                    setIsVisibleSection("client");
+                  } else {
+                    setIsVisibleSection("");
+                  }
+                }}
               />
               <Section
                 title={"Career"}
@@ -79,7 +98,27 @@ const Instamart = () => {
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
                 isVisible={visibleSection == "career"}
-                setIsVisible={() => setIsVisibleSection("career")}
+                setIsVisible={(display) => {
+                  if (display) {
+                    setIsVisibleSection("career");
+                  } else {
+                    setIsVisibleSection("");
+                  }
+                }}
+              />
+              <Section
+                title={"FAQs"}
+                description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+                isVisible={visibleSection == "faq"}
+                setIsVisible={(display) => {
+                  if (display) {
+                    setIsVisibleSection("faq");
+                  } else {
+                    setIsVisibleSection("");
+                  }
+                }}
               />
             </div>
           </div>
