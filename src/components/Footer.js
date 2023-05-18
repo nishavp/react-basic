@@ -1,6 +1,5 @@
 import footerLogo from "../assets/images/logo-white.png";
-import { FiChevronRight } from "react-icons/fi";
-import { FiPhoneCall } from "react-icons/fi";
+import { FiChevronRight, FiPhoneCall } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 

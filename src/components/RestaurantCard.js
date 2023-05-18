@@ -1,5 +1,4 @@
-import { BsFillStarFill } from "react-icons/bs";
-import { BsCurrencyRupee } from "react-icons/bs";
+import { BsFillStarFill, BsCurrencyRupee } from "react-icons/bs";
 import { CDN_URL } from "../utils/constants";
 
 //single restaurant card component as we will resuse it
