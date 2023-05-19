@@ -13,6 +13,7 @@ import ProfileClass from "./components/ProfileClass";
 import CardShimmer from "./components/CardShimmer";
 import AccordionExample from "./components/AccordionExample";
 import UserContext from "./utils/userContext";
+import ContextExample from "./components/ContextExample";
 
 // to create separate bundle, we have to create dynamic import
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -33,7 +34,12 @@ const AppLayout = () => {
 
   return (
     <div className="app">
-      <UserContext.Provider value={user}>
+      <UserContext.Provider
+        value={{
+          user: user,
+          setUser: setUser,
+        }}
+      >
         <HeaderComponent />
         <Outlet />
         <FooterLayout />
@@ -70,6 +76,10 @@ const appRouter = createBrowserRouter([
       {
         path: "accordion",
         element: <AccordionExample />,
+      },
+      {
+        path: "context-example",
+        element: <ContextExample />,
       },
       {
         path: "/restaurant/:restaurantId",

@@ -2,12 +2,9 @@ import footerLogo from "../assets/images/logo-white.png";
 import { FiChevronRight, FiPhoneCall } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import UserContext from "../utils/userContext";
 
 //footer component
 const FooterLayout = () => {
-  const { user } = useContext(UserContext);
   return (
     <div className="footer-layout">
       <div className="footer-divider">
@@ -85,7 +82,7 @@ const FooterLayout = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>Design & Developed By {user.name} !!</p>
+          <p>Design & Developed By Nisha Prasad !!</p>
         </div>
       </footer>
     </div>
