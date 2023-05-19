@@ -3,6 +3,7 @@ import UserContext from "../utils/userContext";
 
 const ContextExample = () => {
   const { user, setUser } = useContext(UserContext);
+
   return (
     <div className="main-section">
       <div className="container">
@@ -12,7 +13,6 @@ const ContextExample = () => {
             globally
           </h2>
           <br />
-
           <h2 className="font-bold text-[20px] mb-4 underline underline-offset-4">
             User Information
           </h2>
@@ -20,7 +20,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Name : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.name}
+              value={user.name || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -33,7 +33,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Email : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.email}
+              value={user.email || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -46,7 +46,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Address : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.address}
+              value={user.address || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -59,7 +59,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Job : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.job}
+              value={user.job || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -72,7 +72,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Company : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.company}
+              value={user.company || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -85,7 +85,7 @@ const ContextExample = () => {
             <label className="min-w-[130px]">Enter Website : </label>
             <input
               className="border border-black rounded px-2 py-1 text-[15px]"
-              value={user.website}
+              value={user.website || ""}
               onChange={(e) =>
                 setUser({
                   ...user,
@@ -94,9 +94,16 @@ const ContextExample = () => {
               }
             />
           </div>
-
+          {/* <button
+            className="px-4 py-2 rounded bg-[#8ec038] text-[#fff] mt-2 mr-4 mb-4"
+            onClick={() => {
+              console.log(user);
+            }}
+          >
+            Update User
+          </button> */}
           <br />
-          <h2 className="font-bold text-[20px] mb-4 underline underline-offset-4">
+          <h2 className="font-bold text-[20px] mt-2 mb-4 underline underline-offset-4">
             User Details
           </h2>
           <div className="w-[50%]">
