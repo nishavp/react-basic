@@ -2,6 +2,6 @@
   "editor.formatOnSave": true,
   "diffEditor.wordWrap": "on",
   "diffEditor.renderMarginRevertIcon": false,
-  "editor.fontSize": 12,
+  "editor.fontSize": 15,
   "editor.formatOnPaste": true
 }

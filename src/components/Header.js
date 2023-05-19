@@ -1,25 +1,32 @@
+import { useContext } from "react";
 import logo from "../assets/images/logo.png";
 import cart from "../assets/images/cart.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/userContext";
 
 //header component
 const HeaderComponent = () => {
   // check for online and show status
   const isOnline = useOnline();
+  // get user context info
+  const { user } = useContext(UserContext);
 
   return (
     <div className="headerlayout">
       {isOnline ? (
         <div className="green-signal">
           <div className="container">
-            <p>You're Online !! Welcome back.</p>
+            <p>Hii, {user.name} You're Online !! Welcome back.</p>
           </div>
         </div>
       ) : (
         <div className="red-signal">
           <div className="container">
-            <p>You're Offline !! Please check your internet connection.</p>
+            <p>
+              Hii, {user.name} You're Offline !! Please check your internet
+              connection.
+            </p>
           </div>
         </div>
       )}

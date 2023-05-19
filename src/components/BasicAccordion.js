@@ -15,20 +15,22 @@ const Section = ({ title, description }) => {
           {isVisible ? (
             <button onClick={() => setIsVisible(false)}>
               <span className="flex items-center gap-2">
-                <span>Hide</span> <BsFillArrowDownSquareFill size={25} />
+                <span>Hide</span>{" "}
+                <BsFillArrowDownSquareFill fill="#8ec038" size={25} />
               </span>
             </button>
           ) : (
             <button onClick={() => setIsVisible(true)}>
               <span className="flex items-center gap-2">
-                <span>Show</span> <BsArrowRightSquareFill size={25} />
+                <span>Show</span>{" "}
+                <BsArrowRightSquareFill fill="#8ec038" size={25} />
               </span>
             </button>
           )}
         </div>
       </div>
       {isVisible && (
-        <div className="p-3">
+        <div className="p-3 transition ease-in-out duration-300">
           <p>{description}</p>
         </div>
       )}

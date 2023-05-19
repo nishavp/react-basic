@@ -1,0 +1,27 @@
+React Context 
+- Context provide a way to pass data throgh the component tree without having to pass props down manually at each entry level.
+- In simple can be called as global space data where any component can have access to it.
+- For eg. user details and its authentication, theme details etc
+
+# THIS IS IN FUNCTIONAL COMPONENT METHOD
+Code Example => Create file in util createContext and import where ever you need to show. Check header file
+import { createContext } from "react";
+
+const UserContext = createContext({
+  // pass default data objects
+  user: {
+    name: "Nisha Prasad",
+    email: "nisha@gmail.com",
+    address: "Mumbai",
+    job: "Developer",
+    company: "Andheri",
+    website: "Food Website",
+  },
+});
+
+export default UserContext;
+
+# TO USE SAME CONTEXT IN CLASS COMPONENT METHOD
+- Check example of profile class component
+- <UserContext.Consumer> - to show the default value
+- <UserContext.Provider> - used to override the default value and show dynamic data

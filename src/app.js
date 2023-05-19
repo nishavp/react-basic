@@ -1,5 +1,5 @@
 //importing react when cdn links are removed
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/Header";
@@ -12,17 +12,32 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
 import CardShimmer from "./components/CardShimmer";
 import AccordionExample from "./components/AccordionExample";
+import UserContext from "./utils/userContext";
 
 // to create separate bundle, we have to create dynamic import
 const Instamart = lazy(() => import("./components/Instamart"));
 
 //main layout
 const AppLayout = () => {
+  // set the dynamic data
+  const [user, setUser] = useState({
+    user: {
+      name: "Nisha Prasad",
+      email: "nisha@gmail.com",
+      address: "Mumbai",
+      job: "Software Developer",
+      company: "Andheri",
+      website: "Food Website",
+    },
+  });
+
   return (
     <div className="app">
-      <HeaderComponent />
-      <Outlet />
-      <FooterLayout />
+      <UserContext.Provider value={user}>
+        <HeaderComponent />
+        <Outlet />
+        <FooterLayout />
+      </UserContext.Provider>
     </div>
   );
 };
