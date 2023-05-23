@@ -31,3 +31,8 @@ If repo clone from github
 # Tailwind CSS - Install Tailwind CSS with Parcel
 
 - Link : https://tailwindcss.com/docs/guides/parcel
+
+# Redux
+
+- npm install @reduxjs/toolkit (redux core main library)
+- npm install react-redux (Bridge between redux and react)

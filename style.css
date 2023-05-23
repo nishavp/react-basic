@@ -59,7 +59,7 @@ input , button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0;
+    padding: 15px 0;
 }
 .logowrap img{
     width: 150px;
@@ -99,9 +99,9 @@ input , button {
 }
 .section-heading h2{
     color: #171422;
-    font-size: 35px;
+    font-size: 32px;
     text-transform: capitalize;
-    margin: 20px 0;
+    margin: 15px 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -530,4 +530,19 @@ input , button {
 .mcol2 p{
     margin-top: 0;
     margin-bottom: 10px;
+}
+.add-to-cart{
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+    background-color: #48604c;
+    border: 2px solid #48604c;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 1.2;
+    transition: all .6s;
+    display: inline-block;
+    margin: 10px 0;
 }

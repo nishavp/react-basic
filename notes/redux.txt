@@ -1,0 +1,28 @@
+Steps to create cart flow
+
+- Created Store ie store.js 
+    - configureStore() 
+- Then we connected our store to the app in app.js 
+    - we wrap all component inside <Provider store={storeName}>....</Provider> so that our app has access to the store 
+- Then we created cartSlice.js 
+    - This will contain below information 
+        - name : It will be initial name 
+        - initialState : default initial state of cart 
+        - reducers : 
+            - It will have action mapped to the function which needs to be called. 
+            - It takes to parameter (state or action or both).
+            - state : It will be holding the initial value
+            - action : what action to be performed
+            - It wont return anything directly modify the state
+    - After creating the action and reducer we need to export both 
+        - export const { addItem, removeItem, clearCart } = cartSlice.actions 
+        - export default cartSlice.reducer;
+- After creating the slice we need to put it to store
+    - Add all reducer ie slices to the store
+    - reducer: {
+        cart: cartSlice,
+        user:userSlice,
+        },
+- Now Read the data ie subscribe using below the hook 
+    - useSelector => check header file
+    - useDispatch => check add to cart button 

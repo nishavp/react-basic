@@ -11,9 +11,13 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import ProfileClass from "./components/ProfileClass";
 import CardShimmer from "./components/CardShimmer";
+import Cart from "./components/Cart";
 import AccordionExample from "./components/AccordionExample";
 import UserContext from "./utils/userContext";
 import ContextExample from "./components/ContextExample";
+// connection of store to react application
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 // to create separate bundle, we have to create dynamic import
 const Instamart = lazy(() => import("./components/Instamart"));
@@ -33,18 +37,20 @@ const AppLayout = () => {
   });
 
   return (
-    <div className="app">
+    <Provider store={store}>
       <UserContext.Provider
         value={{
           user: user,
           setUser: setUser,
         }}
       >
-        <HeaderComponent />
-        <Outlet />
-        <FooterLayout />
+        <div className="app">
+          <HeaderComponent />
+          <Outlet />
+          <FooterLayout />
+        </div>
       </UserContext.Provider>
-    </div>
+    </Provider>
   );
 };
 
@@ -80,6 +86,10 @@ const appRouter = createBrowserRouter([
       {
         path: "context-example",
         element: <ContextExample />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/restaurant/:restaurantId",

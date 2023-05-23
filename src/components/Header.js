@@ -4,6 +4,7 @@ import cart from "../assets/images/cart.png";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
 
 //header component
 const HeaderComponent = () => {
@@ -11,6 +12,9 @@ const HeaderComponent = () => {
   const isOnline = useOnline();
   // get user context info
   const { user } = useContext(UserContext);
+
+  // reading cart items
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="headerlayout">
@@ -47,15 +51,19 @@ const HeaderComponent = () => {
                 <Link to="/about">About</Link>
               </li>
               <li>
-                <Link to="contact">Contact Us</Link>
+                <Link to="/contact">Contact Us</Link>
               </li>
               <li>
-                <Link to="instamart">Instamart</Link>
+                <Link to="/instamart">Instamart</Link>
               </li>
               <li>
-                <a>
+                <Link
+                  to="/cart"
+                  className="flex justify-between items-center gap-2"
+                >
                   <img className="cart-icon" src={cart} alt="cart" />
-                </a>
+                  <span>{cartItems.length}</span>
+                </Link>
               </li>
             </ul>
           </div>

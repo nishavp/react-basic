@@ -6,7 +6,7 @@ const Contact = () => {
         <div className="container">
           <div className="contact-page-section">
             <div className="section-heading">
-              <h2>
+              <h2 className="font-bold">
                 <span>Contact Us </span>
               </h2>
             </div>

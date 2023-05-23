@@ -3,5 +3,9 @@
   "diffEditor.wordWrap": "on",
   "diffEditor.renderMarginRevertIcon": false,
   "editor.fontSize": 15,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "debug.console.fontSize": 14,
+  "scm.inputFontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "interactiveSession.editor.fontSize": 14
 }
