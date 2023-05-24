@@ -8,6 +8,9 @@ import {
 import useRestaurant from "../utils/useRestaurant";
 import { addItem } from "../utils/cartSlice";
 import { useDispatch } from "react-redux";
+import { incrementQuantity, decrementQuantity } from "../utils/helper";
+import { useState } from "react";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 
 //restaurant detail page component
 const RestaurantMenu = () => {
@@ -21,6 +24,21 @@ const RestaurantMenu = () => {
   const dispatch = useDispatch();
   const addFoodItem = (item) => {
     dispatch(addItem(item));
+  };
+
+  // quantity logic
+  const [quantity, setQuantity] = useState({});
+  const incrementQuantityHandler = (itemId) => {
+    setQuantity((quantity) => ({
+      ...quantity,
+      [itemId]: incrementQuantity(quantity[itemId] || 1),
+    }));
+  };
+  const decrementQuantityHandler = (itemId) => {
+    setQuantity((quantity) => ({
+      ...quantity,
+      [itemId]: decrementQuantity(quantity[itemId] || 1),
+    }));
   };
 
   // if (!restaurant) return null;
@@ -100,12 +118,37 @@ const RestaurantMenu = () => {
                             item?.card?.info?.price / 100}
                           /-
                         </p>
-                        <button
-                          className="add-to-cart"
-                          onClick={() => addFoodItem(item)}
-                        >
-                          Add to Cart
-                        </button>
+                        <div className="menu-btn-wrapper inline-flex gap-3 align-center mt-4">
+                          <div className="cart-quantity">
+                            <div className="inline-flex gap-3 align-center rounded border p-1 text-[14px]">
+                              <button
+                                onClick={() =>
+                                  decrementQuantityHandler(item?.card?.info?.id)
+                                }
+                              >
+                                <AiOutlineMinus />
+                              </button>
+                              <span className="w-[25px] text-center">
+                                {quantity[item?.card?.info?.id] || 1}
+                              </span>
+                              <button
+                                onClick={() =>
+                                  incrementQuantityHandler(item?.card?.info?.id)
+                                }
+                              >
+                                <AiOutlinePlus />
+                              </button>
+                            </div>
+                          </div>
+                          <div className="add-to-cart-btn">
+                            <button
+                              className="add-to-cart"
+                              onClick={() => addFoodItem(item)}
+                            >
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   ))}

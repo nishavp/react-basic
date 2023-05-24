@@ -6,7 +6,6 @@ import { clearCart, removeItem } from "../utils/cartSlice";
 const Cart = () => {
   // access to cart items
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
 
   const dispatch = useDispatch();
   const handleClearCart = () => {
@@ -46,29 +45,34 @@ const Cart = () => {
             </div>
 
             <div className="mb-10">
-              {cartItems.map((item) => (
-                <div
-                  className="menu-single-item-wrap relative mb-5"
-                  key={item?.card?.info?.id}
-                >
-                  <MenuItem
-                    image={item?.card?.info?.imageId}
-                    name={item?.card?.info?.name}
-                    description={item?.card?.info?.description}
-                    price={
-                      item?.card?.info?.price || item?.card?.info?.defaultPrice
-                    }
-                  />
-                  <div className="cart-btn-wrapper">
-                    <button
-                      className="remove-btn"
-                      onClick={() => removeMenuItem(item)}
-                    >
-                      Remove
-                    </button>
+              {cartItems.length === 0 ? (
+                <p>No Items in Cart</p>
+              ) : (
+                cartItems.map((item) => (
+                  <div
+                    className="menu-single-item-wrap relative mb-5"
+                    key={item?.card?.info?.id}
+                  >
+                    <MenuItem
+                      image={item?.card?.info?.imageId}
+                      name={item?.card?.info?.name}
+                      description={item?.card?.info?.description}
+                      price={
+                        item?.card?.info?.price ||
+                        item?.card?.info?.defaultPrice
+                      }
+                    />
+                    <div className="cart-btn-wrapper">
+                      <button
+                        className="remove-btn"
+                        onClick={() => removeMenuItem(item)}
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              )}
             </div>
           </div>
         </div>

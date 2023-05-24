@@ -544,7 +544,7 @@ input , button {
     line-height: 1.2;
     transition: all .6s;
     display: inline-block;
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 .menu-single-item-wrap{
     border:1px solid #00000050;

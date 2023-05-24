@@ -7,3 +7,16 @@ export function filterSearchData(searchText, listOfRestaurant) {
 
   return resultData;
 }
+
+// logic for increment and decrement item quantity
+export const incrementQuantity = (count) => {
+  count += 1;
+  return count;
+};
+
+export const decrementQuantity = (count) => {
+  if (count > 1) {
+    count -= 1;
+  }
+  return count;
+};
