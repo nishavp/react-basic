@@ -22,6 +22,10 @@ const MenuItem = ({ name, description, image, price, quantity }) => {
           <p>
             <span className="font-bold">Amount</span> : Rs. {price / 100}/-
           </p>
+          <p>
+            <span className="font-bold">Total</span> : Rs.{" "}
+            {(price * quantity) / 100}/-
+          </p>
         </div>
       </div>
     </div>

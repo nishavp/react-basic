@@ -18,7 +18,8 @@ const Cart = () => {
   // Calculate cart total
   const cartTotal = cartItems.reduce((total, item) => {
     const itemPrice = item?.card?.info?.price || item?.card?.info?.defaultPrice;
-    return total + itemPrice;
+    const itemQuantity = item.quantity || 1;
+    return (total + itemPrice) * itemQuantity;
   }, 0);
 
   return (
@@ -57,6 +58,7 @@ const Cart = () => {
                       image={item?.card?.info?.imageId}
                       name={item?.card?.info?.name}
                       description={item?.card?.info?.description}
+                      quantity={item?.quantity}
                       price={
                         item?.card?.info?.price ||
                         item?.card?.info?.defaultPrice

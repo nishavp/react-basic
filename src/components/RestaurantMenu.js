@@ -23,7 +23,12 @@ const RestaurantMenu = () => {
 
   const dispatch = useDispatch();
   const addFoodItem = (item) => {
-    dispatch(addItem(item));
+    // Include the quantity value in the item object
+    const itemWithQuantity = {
+      ...item,
+      quantity: quantity[item?.card?.info?.id] || 1,
+    };
+    dispatch(addItem(itemWithQuantity));
   };
 
   // quantity logic
