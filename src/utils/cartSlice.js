@@ -12,8 +12,13 @@ const cartSlice = createSlice({
       // here is initial action and state. As state contain items so we need to push it
       state.items.push(action.payload);
     },
-    removeItem: (state) => {
-      state.items.pop;
+    removeItem: (state, action) => {
+      // this remove the target item from the cart - mapping structure to be same
+      state.items = state.items.filter(
+        (item) => item?.card?.info?.id !== action.payload.card?.info?.id
+      );
+      // this will remove last item
+      //state.items.pop(action.payload);
     },
     clearCart: (state) => {
       // logic to clear cart

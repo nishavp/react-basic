@@ -546,3 +546,29 @@ input , button {
     display: inline-block;
     margin: 10px 0;
 }
+.menu-single-item-wrap{
+    border:1px solid #00000050;
+    padding:15px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: flex-start;
+}
+.cart-btn-wrapper{
+    text-align: right;
+}
+.remove-btn{
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+    text-align: center;
+    background-color: #48604c;
+    border: 2px solid #48604c;
+    border-radius: 4px;
+    padding: 6px 15px;
+    font-size: 14px;
+    line-height: 1.2;
+    transition: all .6s;
+    display: inline-block;
+    margin: 10px 0;
+}
