@@ -1,0 +1,38 @@
+# Types of Testing 
+- Manual Testing
+- Automation Testing ie Selenium tool can be used 
+- Unit Testing - test by developers
+- Integration Testing
+    - Testing integration between the components ie that can specific feature for eg search part 
+
+Jest 
+- Link : https://jestjs.io/
+- Features
+    - Fast and save 
+    - Generate code coverage by adding the flag 
+    - Jest uses a custom resolver for imports in your tests, making it simple to mock any object outside of your test’s scope.
+    - Jest is a JavaScript testing framework designed to ensure correctness of any JavaScript codebase. 
+- Install - https://jest-bot.github.io/jest/docs/getting-started.html
+
+
+
+
+# Steps to setup Test Cases
+- Install React Testing Library : npm install --save-dev @testing-library/react 
+- Install Jest : npm install -D jest 
+- Configure Jest    
+    - npx is used as we need to initialize once
+    - npx jest --init (as we need to create file once) 
+- Run the jest 
+    - npm run test 
+    - It will give error of jest-environment-jsdom
+    - So Install 
+        - npm i -D jest-environment-jsdom
+- Now create a test file 
+    - Create folder inside components ie __tests__
+    - Convention to create file ie sum.test.js 
+- Configure babel 
+    - Link : https://jestjs.io/docs/28.x/getting-started#using-babel
+    - npm install --save-dev babel-jest @babel/core @babel/preset-env
+    - Configure the babel - check .babelrc or u can create babel.config.js file too 
+    

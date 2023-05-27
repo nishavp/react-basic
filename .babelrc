@@ -1,0 +1,4 @@
+// added double quotes as passing as json object
+{
+    "presets": [["@babel/preset-env'", {"targets": {"node": "current"}}]]
+}

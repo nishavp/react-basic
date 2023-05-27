@@ -36,3 +36,9 @@ If repo clone from github
 
 - npm install @reduxjs/toolkit (redux core main library)
 - npm install react-redux (Bridge between redux and react)
+
+# React Testing Library
+
+- npm install --save-dev @testing-library/react
+- npm install -D jest
+- npm install --save-dev babel-jest @babel/core @babel/preset-env
