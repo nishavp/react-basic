@@ -34,5 +34,11 @@ Jest
 - Configure babel 
     - Link : https://jestjs.io/docs/28.x/getting-started#using-babel
     - npm install --save-dev babel-jest @babel/core @babel/preset-env
-    - Configure the babel - check .babelrc or u can create babel.config.js file too 
-    
+    - Configure the babel - check .babelrc or u can create babel.config.json file too
+
+
+# Test Cases
+- Header 
+    - Logo should be loaded 
+    - user should be online 
+    - cart items to be 0

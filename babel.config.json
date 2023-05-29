@@ -1,0 +1,8 @@
+{
+  "presets": [
+    // setting for import statements
+    ["@babel/preset-env",{"targets": { "node": "current"}}],
+    // to understand JSX code in test file
+    ["@babel/preset-react",{"runtime":"automatic"}]
+  ]
+}

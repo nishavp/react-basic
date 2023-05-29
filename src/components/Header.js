@@ -18,28 +18,30 @@ const HeaderComponent = () => {
 
   return (
     <div className="headerlayout">
-      {isOnline ? (
-        <div className="green-signal">
-          <div className="container">
-            <p>Hii, {user.name} You're Online !! Welcome back.</p>
+      <div data-testid="online-status">
+        {isOnline ? (
+          <div className="green-signal">
+            <div className="container">
+              <p>Hii, {user.name} You are Online !! Welcome back.</p>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="red-signal">
-          <div className="container">
-            <p>
-              Hii, {user.name} You're Offline !! Please check your internet
-              connection.
-            </p>
+        ) : (
+          <div className="red-signal">
+            <div className="container">
+              <p>
+                Hii, {user.name} You are Offline !! Please check your internet
+                connection.
+              </p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       <div className="container">
         <div className="headerWrap">
           <div className="logowrap">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img data-testid="logoId" src={logo} alt="logo" />
             </Link>
           </div>
           <div className="menuLinks">
@@ -62,7 +64,7 @@ const HeaderComponent = () => {
                   className="flex justify-between items-center gap-2"
                 >
                   <img className="cart-icon" src={cart} alt="cart" />
-                  <span>{cartItems.length}</span>
+                  <span data-testid="cartId">{cartItems.length}</span>
                 </Link>
               </li>
             </ul>
