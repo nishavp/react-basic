@@ -92,7 +92,7 @@ const RestaurantMenu = () => {
             ) : (
               <div className="menu-list">
                 <h2 className="font-bold text-xl">Menu Item List</h2>
-                <div className="menu-list-ul">
+                <div className="menu-list-ul" data-testid="menu">
                   {Object.values(menuList).map((item) => (
                     <div key={item?.card?.info?.id} className="menu-list-wrap">
                       <div className="m1-col">
@@ -147,6 +147,7 @@ const RestaurantMenu = () => {
                           </div>
                           <div className="add-to-cart-btn">
                             <button
+                              data-testid="add-to-cart-btn"
                               className="add-to-cart"
                               onClick={() => addFoodItem(item)}
                             >

@@ -73,6 +73,7 @@ const BodyLayout = () => {
               </div>
               <div className="search-container">
                 <input
+                  data-testid="search-input-id"
                   type="text"
                   className="search-input"
                   placeholder="Search"
@@ -81,6 +82,7 @@ const BodyLayout = () => {
                   onChange={(e) => setSearchText(e.target.value)}
                 />
                 <button
+                  data-testid="search-btn"
                   className="red-btn"
                   onClick={() => {
                     // call the function ie search the text in the list of restaurant
@@ -107,7 +109,7 @@ const BodyLayout = () => {
                   <p>No data found</p>
                 </div>
               ) : (
-                <div className="card-grid">
+                <div className="card-grid" data-testid="rest-list">
                   {listOfFilteredRestaurant.map((restaurant) => (
                     <Link
                       to={"/restaurant/" + restaurant.data.id}

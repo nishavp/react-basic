@@ -43,3 +43,4 @@ If repo clone from github
 - npm install -D jest
 - npm install --save-dev babel-jest @babel/core @babel/preset-env
 - npm install -D @babel/preset-react
+- npm i -D @testing-library/jest-dom

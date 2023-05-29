@@ -3,7 +3,7 @@
 const CardShimmer = () => {
   return (
     <div className="loading-cards">
-      <div className="loading-cards-grid">
+      <div className="loading-cards-grid" data-testid="shimmer-ui">
         {Array(6)
           .fill("")
           .map((e, index) => (
