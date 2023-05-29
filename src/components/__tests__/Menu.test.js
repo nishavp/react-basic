@@ -31,6 +31,9 @@ test("Update Cart on add items to cart", async () => {
   await waitFor(() => expect(body.getByTestId("menu")));
   const addBtn = body.getAllByTestId("add-to-cart-btn");
   fireEvent.click(addBtn[0]);
+  fireEvent.click(addBtn[1]);
+  fireEvent.click(addBtn[2]);
+  fireEvent.click(addBtn[3]);
   const cartItems = body.getByTestId("cartId");
-  expect(cartItems.innerHTML).toBe("1");
+  expect(cartItems.innerHTML).toBe("4");
 });
